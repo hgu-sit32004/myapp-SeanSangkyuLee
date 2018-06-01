@@ -18,8 +18,7 @@ class Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    
-    
+//MARK: -Table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         MemoData = UserDefaults.standard.object(forKey: "MemoData") as? [String] ?? [String]()
@@ -53,7 +52,7 @@ class Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
         //When select the row what are you gonna do?
         //show the record scene
     }
-    
+//Table_End
     
     
     override func didReceiveMemoryWarning() {

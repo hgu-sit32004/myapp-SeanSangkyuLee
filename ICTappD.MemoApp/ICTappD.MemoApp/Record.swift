@@ -10,8 +10,11 @@ import UIKit
 
 class Record: UIViewController {
     // Record is the name, UIviewController is the type
+    
+//MARK: -VARIABLE
     @IBOutlet weak var RecordTextView: UITextView!
     var MemoData = [String]()
+//VARIABLE_End
     
     //let does not change
     //var does change
@@ -26,7 +29,7 @@ class Record: UIViewController {
         
         if MemoNumber == -1 {
             
-            MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]	
+            MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
             RecordTextView.text = "..."
             
             
@@ -35,7 +38,7 @@ class Record: UIViewController {
             //Why? Because there is always data in here
             
             RecordTextView.text = MemoData[MemoNumber]
-            //show the things that in the Main's number
+            //show the things that in the Main's designated number
             
         }
         
@@ -72,7 +75,7 @@ class Record: UIViewController {
 */
     
     
-    
+//MARK : -ACTION
     @IBAction func Save(_ sender: Any) {
         
        let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
@@ -103,7 +106,7 @@ class Record: UIViewController {
     //so erase it, change it and put it in the same place
     
     
-    
+//ACTION END
     
     
     
