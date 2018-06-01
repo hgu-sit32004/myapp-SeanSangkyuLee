@@ -15,6 +15,7 @@
 		F370974F20BD15F600360B87 /* ICTappD_MemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370974E20BD15F600360B87 /* ICTappD_MemoAppTests.swift */; };
 		F370975A20BD15F700360B87 /* ICTappD_MemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370975920BD15F700360B87 /* ICTappD_MemoAppUITests.swift */; };
 		F3A8198820BECD28005CA36C /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A8198720BECD28005CA36C /* Record.swift */; };
+		F3E14DA220C18C4000EAD470 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E14DA120C18C4000EAD470 /* MainCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		F370975B20BD15F700360B87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F370976A20BD194F00360B87 /* ICTappD.MemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ICTappD.MemoApp.entitlements; sourceTree = "<group>"; };
 		F3A8198720BECD28005CA36C /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		F3E14DA120C18C4000EAD470 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				F370976A20BD194F00360B87 /* ICTappD.MemoApp.entitlements */,
 				F370973920BD15F500360B87 /* AppDelegate.swift */,
 				F370973B20BD15F500360B87 /* Main.swift */,
+				F3E14DA120C18C4000EAD470 /* MainCell.swift */,
 				F3A8198720BECD28005CA36C /* Record.swift */,
 				F370973D20BD15F500360B87 /* Main.storyboard */,
 				F370974020BD15F600360B87 /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 			files = (
 				F370973C20BD15F500360B87 /* Main.swift in Sources */,
 				F370973A20BD15F500360B87 /* AppDelegate.swift in Sources */,
+				F3E14DA220C18C4000EAD470 /* MainCell.swift in Sources */,
 				F3A8198820BECD28005CA36C /* Record.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

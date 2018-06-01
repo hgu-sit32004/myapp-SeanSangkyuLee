@@ -47,6 +47,11 @@ class Record: UIViewController {
     //This is for adding the data
     
     
+
+    
+    
+    
+    
     
     
 /*
@@ -107,6 +112,23 @@ class Record: UIViewController {
     
     
 //ACTION END
+    
+    
+    @IBAction func Delete(_ sender: Any) {
+        
+        let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+        //First, get the MemoNumber, this is the number since there are numbers on the list.
+        if MemoNumber != -1 {
+            
+            MemoData.remove(at: MemoNumber)
+            UserDefaults.standard.set(MemoData, forKey: "MemoData")
+            
+            //If it is not the "-1" Just erase it 
+        }
+    }
+    
+    
+    
     
     
     

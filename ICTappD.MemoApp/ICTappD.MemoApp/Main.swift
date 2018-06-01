@@ -29,7 +29,12 @@ class Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let Cell = tableView .dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let Cell = tableView .dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MainCell
+        //Got from MainCell
+        MemoData = UserDefaults.standard.object(forKey: "MemoData") as? [String] ?? [String]()
+        //Get the MemoData
+        
+        Cell.TitleLabel.text = MemoData[indexPath.row]
         
         //Design of each Cells
         //let cell, reusable cells and Identifier makes to name it
@@ -60,12 +65,13 @@ class Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
 
+//MARK: -Action
     @IBAction func Add(_ sender: Any) {
         
         UserDefaults.standard.set(-1, forKey: "MemoNumber")
         
     }
-    
+//Action_End
     
 }
 
