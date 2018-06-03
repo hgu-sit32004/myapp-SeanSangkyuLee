@@ -43,8 +43,10 @@
                                             <color key="backgroundColor" red="0.41176470590000003" green="0.85882352939999995" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.41176470588235292" green="0.85882352941176465" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="TitleLabel" destination="dXh-0M-uup" id="krd-ab-BSl"/>
+                                            <outletCollection property="gestureRecognizers" destination="pbi-jN-HK1" appends="YES" id="M2x-Pf-dcJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -79,6 +81,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="pbi-jN-HK1"/>
             </objects>
             <point key="canvasLocation" x="26.5625" y="44.53125"/>
         </scene>
