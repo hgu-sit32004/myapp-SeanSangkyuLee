@@ -12,39 +12,57 @@ class CardModel{
     
     func getCards() -> [Card] {
         
+        var generatedNumbersArray = [Int]()
+        
         //Declare an array to store the generated cards
         var generatedCardsArray = [Card]()
         
         
         
         //Randomly generate pairs of cards
-        for _ in 1...8 {
+        while generatedNumbersArray.count < 8 {
             
             //Get a random number
             let randomNumber = arc4random_uniform(13) + 1
             
-            //Log the number
-            print("generating a random number \(randomNumber)")
             
-            //Create the first card object
-            let cardOne = Card()
-            cardOne.imageName = "card\(randomNumber)"
             
-            generatedCardsArray.append(cardOne)
+            if generatedNumbersArray.contains(Int(randomNumber)) == false {
+                
+                
+                //Log the number
+                print(randomNumber)
+                
+                generatedNumbersArray.append(Int(randomNumber))
+                
+                //Create the first card object
+                let cardOne = Card()
+                cardOne.imageName = "card\(randomNumber)"
+                
+                generatedCardsArray.append(cardOne)
+                
+                //Create the second card object
+                let cardTwo = Card()
+                cardTwo.imageName = "card\(randomNumber)"
+                
+                generatedCardsArray.append(cardTwo)
+            }
             
-            //Create the second card object
-            let cardTwo = Card()
-            cardTwo.imageName = "card\(randomNumber)"
             
-            generatedCardsArray.append(cardTwo)
             
             //OPTIONAL: Make it so we only have unique pairs of cards
         }
         
         //TODO: Randomize the array
+        for i in 0...generatedCardsArray.count-1 {
+            
+        let randomNumber = Int(arc4random_uniform(UInt32(generatedCardsArray.count)))
         
-        print(generatedCardsArray.count)
-        
+        let temporaryStorage = generatedCardsArray[i]
+        generatedCardsArray[i] = generatedCardsArray[randomNumber]
+        generatedCardsArray[randomNumber] = temporaryStorage
+        }
+            
         //REturn the array
         return generatedCardsArray
     
