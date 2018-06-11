@@ -30,7 +30,7 @@ class Record: UIViewController {
         if MemoNumber == -1 {
             
             MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
-            RecordTextView.text = "..."
+            RecordTextView.text = ""
             
             
         } else {
