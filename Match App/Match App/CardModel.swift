@@ -15,6 +15,8 @@ class CardModel{
         //Declare an array to store the generated cards
         var generatedCardsArray = [Card]()
         
+        
+        
         //Randomly generate pairs of cards
         for _ in 1...8 {
             
@@ -22,7 +24,7 @@ class CardModel{
             let randomNumber = arc4random_uniform(13) + 1
             
             //Log the number
-            print(randomNumber)
+            print("generating a random number \(randomNumber)")
             
             //Create the first card object
             let cardOne = Card()
@@ -41,6 +43,7 @@ class CardModel{
         
         //TODO: Randomize the array
         
+        print(generatedCardsArray.count)
         
         //REturn the array
         return generatedCardsArray

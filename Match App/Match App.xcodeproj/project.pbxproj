@@ -62,9 +62,9 @@
 			children = (
 				F370AB0A20CED314004F54C3 /* AppDelegate.swift */,
 				F370AB0C20CED314004F54C3 /* ViewController.swift */,
+				F370AB2020CEEE82004F54C3 /* CardCollectionViewCell.swift */,
 				F370AB1C20CEE9D1004F54C3 /* CardModel.swift */,
 				F370AB1E20CEEAD9004F54C3 /* Card.swift */,
-				F370AB2020CEEE82004F54C3 /* CardCollectionViewCell.swift */,
 				F370AB0E20CED314004F54C3 /* Main.storyboard */,
 				F370AB1120CED315004F54C3 /* Assets.xcassets */,
 				F370AB1320CED315004F54C3 /* LaunchScreen.storyboard */,
