@@ -16,7 +16,8 @@ class Record: UIViewController {
     var MemoData = [String]()
 //VARIABLE_End
     
-    //let does not change
+    
+       //let does not change
     //var does change
     //Group which is consist of String
     //outlet means just show
@@ -41,6 +42,10 @@ class Record: UIViewController {
             //show the things that in the Main's designated number
             
         }
+        
+ 
+        
+        
         
      
     }

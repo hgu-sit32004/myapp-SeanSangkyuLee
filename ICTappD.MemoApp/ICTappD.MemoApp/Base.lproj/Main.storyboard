@@ -39,6 +39,13 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk2-49-Ncb">
+                                                    <rect key="frame" x="694" y="18" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.41176470590000003" green="0.85882352939999995" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
@@ -77,6 +84,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="timerView" destination="Yk2-49-Ncb" id="OQD-TX-nvZ"/>
                         <segue destination="dTQ-zr-GjR" kind="show" identifier="ToRecord" id="8DP-kx-9dq"/>
                     </connections>
                 </viewController>
@@ -125,6 +133,7 @@
                                 <state key="normal" title="RECORD"/>
                                 <connections>
                                     <action selector="Save:" destination="dTQ-zr-GjR" eventType="touchUpInside" id="LTA-wq-8pe"/>
+                                    <action selector="Save:" destination="eGf-PP-1Jv" eventType="touchUpInside" id="z8J-VF-LUL"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="UhE-hb-mRC"/>
                                 </connections>
                             </button>
@@ -137,6 +146,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPH-eg-Egp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eGf-PP-1Jv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="832.8125" y="44.53125"/>
         </scene>
