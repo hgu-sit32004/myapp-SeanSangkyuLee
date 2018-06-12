@@ -14,18 +14,21 @@ class Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var MemoData = [String]()
 
     
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
 //MARK: -Table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        MemoData = UserDefaults.standard.object(forKey: "MemoData") as? [String] ?? [String]()
+       // MemoData = UserDefaults.standard.object(forKey: "MemoData") as? [String] ?? [String]()
         
-        return MemoData.count
+       // return MemoData.count
+        
+        return 0
         //for each section how many rows?
         //Flexible numbers
     }
@@ -33,10 +36,10 @@ class Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let Cell = tableView .dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MainCell
         //Got from MainCell
-        MemoData = UserDefaults.standard.object(forKey: "MemoData") as? [String] ?? [String]()
+        //MemoData = UserDefaults.standard.object(forKey: "MemoData") as? [String] ?? [String]()
         //Get the MemoData
         
-        Cell.TitleLabel.text = MemoData[indexPath.row]
+      //  Cell.TitleLabel.text = MemoData[indexPath.row] /*.getMemoData()*/
         
         //Design of each Cells
         //let cell, reusable cells and Identifier makes to name it
@@ -45,10 +48,14 @@ class Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
     
+    
+    
+    // 키 값의 빈도 수
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let MemoNumber = indexPath.row
-        UserDefaults.standard.set(MemoNumber, forKey: "MemoNumber")
+       // let MemoNumber = indexPath.row
+       // UserDefaults.standard.set(MemoNumber, forKey: "MemoNumber")
         //This code is for saving
         //Therefore if we click it, check the index number
         //Save the memonumber and get the record number -> Record face
@@ -56,7 +63,7 @@ class Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
         //show the number to change the showing status depending on the row
         //For each rows, we call it row
         
-        self.performSegue(withIdentifier: "ToRecord", sender: self)
+       // self.performSegue(withIdentifier: "ToRecord", sender: self)
     
         //When select the row what are you gonna do?
         //show the record scene
@@ -72,7 +79,9 @@ class Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
 //MARK: -Action
     @IBAction func Add(_ sender: Any) {
         
-        UserDefaults.standard.set(-1, forKey: "MemoNumber")
+     // UserDefaults.standard.set(-1, forKey: "MemoNumber")
+        
+        
         
     }
 //Action_End
