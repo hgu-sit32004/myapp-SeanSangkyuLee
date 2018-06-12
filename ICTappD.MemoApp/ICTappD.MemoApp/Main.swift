@@ -76,39 +76,6 @@ class Main: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
     }
 //Action_End
-    
-    
-    
-    //MARK: -Timer
-    
-    
-    @IBOutlet weak var timerView: UILabel!
-    
-    var seconds = 60
-    var timer = Timer()
-    var isTimeRunning = false
-    
-    @IBAction func Save(_ sender: Any) {
-        
-        runTimer()
-        
-    }
-    
-    
-    func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
-    }
-    
-    func updateTimer(){
-        seconds -= 1
-        timerView.text = "\(seconds)"
-    }
-    
-    
-    
-    
-    
-    
-    //Timer_End
+
 }
 
