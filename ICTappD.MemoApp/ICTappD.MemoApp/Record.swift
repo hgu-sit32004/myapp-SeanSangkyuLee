@@ -11,13 +11,13 @@ import UIKit
 class Record: UIViewController {
     // Record is the name, UIviewController is the type
     
-//MARK: -VARIABLE
+    //MARK: -VARIABLE
     @IBOutlet weak var RecordTextView: UITextView!
-    var MemoData = [Memo]()
-//VARIABLE_End
+    var MemoData = [String]()
+    //VARIABLE_End
     
     
-       //let does not change
+    //let does not change
     //var does change
     //Group which is consist of String
     //outlet means just show
@@ -30,78 +30,82 @@ class Record: UIViewController {
         
         if MemoNumber == -1 {
             
-            MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [Memo]
+            MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
             RecordTextView.text = ""
             
             
         } else {
-            MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [Memo]
+            MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
             //Why? Because there is always data in here
             
-          //  RecordTextView.text = MemoData[MemoNumber]
+            RecordTextView.text = MemoData[MemoNumber]
             //show the things that in the Main's designated number
             
         }
-      
+        
+        
+        
+        
+        
+        
     }
     //This is for adding the data
     
     
-
     
     
     
     
     
     
-/*
-        if MemoData.count == 0{
-            RecordTextView.text = "..."
-            //if there is no data, just erase
-            
-        } else {
-            let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
-            //So MemoNumber is always been saved
-            
-            RecordTextView.text = MemoData[MemoNumber]
-        }
-        
-        
-        
-
-        // Do any additional setup after loading the view.
-        //when view is loaded what should we do?
-        //So, It can be string or not therefore, you have to put ? on the back of as
-        //save it as a name "0" and call it
-        //When calling the memodata, string, if there is no string just make it.
-        
     
-    }
-*/
+    /*
+     if MemoData.count == 0{
+     RecordTextView.text = "..."
+     //if there is no data, just erase
+     
+     } else {
+     let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+     //So MemoNumber is always been saved
+     
+     RecordTextView.text = MemoData[MemoNumber]
+     }
+     
+     
+     
+     
+     // Do any additional setup after loading the view.
+     //when view is loaded what should we do?
+     //So, It can be string or not therefore, you have to put ? on the back of as
+     //save it as a name "0" and call it
+     //When calling the memodata, string, if there is no string just make it.
+     
+     
+     }
+     */
     
     
-//MARK : -ACTION
+    //MARK : -ACTION
     @IBAction func Save(_ sender: Any) {
         
-        var memo = Memo(memoData: RecordTextView.text)
-        
-       let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+        let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
         
         if MemoNumber == -1 {
             
-            MemoData.insert(memo, at: 0)
+            MemoData.insert(RecordTextView.text, at: 0)
             
             UserDefaults.standard.set(MemoData, forKey: "MemoData")
             
         } else {
             
             MemoData.remove(at: MemoNumber)
-            MemoData.insert(memo, at: MemoNumber)
+            MemoData.insert(RecordTextView.text, at: MemoNumber)
             
             UserDefaults.standard.set(MemoData, forKey: "MemoData")
             
+            
         }
-      
+        
     }
     //action means do something
     //This is adding Memos, insert it and put it
@@ -112,7 +116,7 @@ class Record: UIViewController {
     //so erase it, change it and put it in the same place
     
     
-//ACTION END
+    //ACTION END
     
     
     @IBAction func Delete(_ sender: Any) {
@@ -125,9 +129,13 @@ class Record: UIViewController {
             UserDefaults.standard.set(MemoData, forKey: "MemoData")
             
             //If it is not the "-1" Just erase it
-            
         }
     }
+    
+    
+    
+    
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -135,15 +143,16 @@ class Record: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+

@@ -16,7 +16,6 @@
 		F370975A20BD15F700360B87 /* ICTappD_MemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370975920BD15F700360B87 /* ICTappD_MemoAppUITests.swift */; };
 		F3A8198820BECD28005CA36C /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A8198720BECD28005CA36C /* Record.swift */; };
 		F3E14DA220C18C4000EAD470 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E14DA120C18C4000EAD470 /* MainCell.swift */; };
-		F3EA8E5D20D039610065C9C1 /* pageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA8E5820D039600065C9C1 /* pageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +52,6 @@
 		F370976A20BD194F00360B87 /* ICTappD.MemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ICTappD.MemoApp.entitlements; sourceTree = "<group>"; };
 		F3A8198720BECD28005CA36C /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		F3E14DA120C18C4000EAD470 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
-		F3EA8E5820D039600065C9C1 /* pageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = pageView.swift; path = "../../../../../Desktop/myapp-gggoeun-master/pageView.swift"; sourceTree = "<group>"; };
-		F3EA8E6320D042FD0065C9C1 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
-		F3EA8E6420D043000065C9C1 /* mangeMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mangeMemo.swift; sourceTree = "<group>"; };
-		F3EA8E6720D043590065C9C1 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		F3EA8E6820D0435D0065C9C1 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
-		F3EA8E6920D0436A0065C9C1 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				F3EA8E6620D0434A0065C9C1 /* View */,
-				F3EA8E6520D0430F0065C9C1 /* Controller */,
 				F370976A20BD194F00360B87 /* ICTappD.MemoApp.entitlements */,
 				F370973920BD15F500360B87 /* AppDelegate.swift */,
 				F370973B20BD15F500360B87 /* Main.swift */,
@@ -121,8 +113,6 @@
 				F370974020BD15F600360B87 /* Assets.xcassets */,
 				F370974220BD15F600360B87 /* LaunchScreen.storyboard */,
 				F370974520BD15F600360B87 /* Info.plist */,
-				F3EA8E5820D039600065C9C1 /* pageView.swift */,
-				F3EA8E6220D042E90065C9C1 /* Model */,
 			);
 			path = ICTappD.MemoApp;
 			sourceTree = "<group>";
@@ -150,25 +140,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F3EA8E6220D042E90065C9C1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F3EA8E6420D043000065C9C1 /* mangeMemo.swift */,
-				F3EA8E6320D042FD0065C9C1 /* Memo.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F3EA8E6520D0430F0065C9C1 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F3EA8E6720D043590065C9C1 /* DataViewController.swift */,
-				F3EA8E6820D0435D0065C9C1 /* ModelController.swift */,
-				F3EA8E6920D0436A0065C9C1 /* RootViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		F3EA8E6620D0434A0065C9C1 /* View */ = {
@@ -315,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F370973C20BD15F500360B87 /* Main.swift in Sources */,
-				F3EA8E5D20D039610065C9C1 /* pageView.swift in Sources */,
 				F370973A20BD15F500360B87 /* AppDelegate.swift in Sources */,
 				F3E14DA220C18C4000EAD470 /* MainCell.swift in Sources */,
 				F3A8198820BECD28005CA36C /* Record.swift in Sources */,
